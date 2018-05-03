@@ -1,57 +1,40 @@
-<h1>Eat-Da-Burger</h1>
-<ul>
-    {{#each burgers}}
-    <li>
-        <p>
-            {{this.id}}. {{this.burger_name}}
+<div class="container-fluid text-center p-4">
+    <h1>Eat The Burger</h1>
+</div>
+<div class="container p-4">
+    <div class="row">
+        <div class="col-4-lg text-center uneaten">
+            <ul>
+                {{#each burger}} {{#unless devoured}}
+                <li>
+                    <p>
+                        {{this.burger_name}}
 
-            <button data-burgersid="{{this.id}}" class="devburger">Devour</button>
-        </p>
-    </li>
-    {{/each}}
-</ul>
-
-<h2>Add a Burger to Devour</h2>
-<form id="addburger" class="button-size">
-    <textarea type="text" name="burger"></textarea>
-    <button type="submit">Add Burger!</button>
-</form>
-
-
-<script type="text/javascript">
-
-    $(".devburger").on("click", function (event) {
-        var id = $(this).data("burgersid");
-
-        // Send the DELETE request.
-        $.ajax("/burgers/" + id, {
-            type: "DELETE"
-        }).then(
-            function () {
-                console.log("deleted id ", id);
-                // Reload the page to get the updated list
-                location.reload();
-            }
-        );
-    });
-
-    $("#addburger").on("submit", function (event) {
-        event.preventDefault();
-
-        var newBurger = {
-            burger: $("#addburger [name=burger]").val().trim()
-        };
-
-        // Send the POST request.
-        $.ajax("/burgers", {
-            type: "POST",
-            data: newBurger
-        }).then(
-            function () {
-                console.log("added new burger");
-                // Reload the page to get the updated list
-                location.reload();
-            }
-        );
-    });
-</script>
+                        <button data-burgerid="{{this.id}}" class="devburger" data-newDevour={{devoured}}>Devour</button>
+                    </p>
+                </li>
+                {{/unless}} {{/each}}
+            </ul>
+        </div>
+        <div class="col-4-lg text-center picture p-4">
+            <img src="/assets/img/burgers2.png" alt="burger cartoon image" class="burgerImg">
+        </div>
+        <div class="col-4-lg text-center eaten">
+            <ul>
+                {{#each burger}} {{#if devoured}}
+                <li>
+                    {{burger_name}}
+                </li>
+                {{/if}} {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="row text-center p-4">
+        <div class="col-12-lg ">
+            <form id="addburger" class="button-size">
+                <textarea type="text" name="burger" id="burgerInput"></textarea>
+                <button type="submit" class="btn btn-primary">Add Burger!</button>
+            </form>
+        </div>
+    </div>
+</div>

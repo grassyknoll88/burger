@@ -1,0 +1,27 @@
+body {
+  background-color: orangered;
+}
+
+.eaten {
+  float: right;
+}
+
+.burgerImg {
+  width: 250px;
+}
+
+textarea {
+  width: 250px;
+  margin: 0 auto;
+}
+
+h1,
+li,
+ul,
+p {
+  font-family: "Quicksand", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}

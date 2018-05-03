@@ -1,7 +1,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var connection = require("./config/connection.js");
-var burger = require("./models/burger.js");
+var burger = require("./models/burger");
 
 var app = express();
 
