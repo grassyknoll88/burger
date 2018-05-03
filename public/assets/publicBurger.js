@@ -1,13 +1,14 @@
 $(function() {
   $(".devburger").on("click", function(event) {
-    var id = $(this).data("burgersid");
-
-    // Send the DELETE request.
-    $.ajax("/burgers/" + id, {
-      type: "DELETE"
+    var id = $(this).data("burgerid");
+    var newDevour = $(this).data("newDevour");
+    newDevourState = {
+      devoured: newDevour
+    };
+    $.ajax("/api/burgers/" + id, {
+      type: "PUT",
+      data: newDevourState
     }).then(function() {
-      console.log("deleted id ", id);
-      // Reload the page to get the updated list
       location.reload();
     });
   });
@@ -16,18 +17,18 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      burger: $("#addburger [name=burger]")
+      burger: $("#burgerInput")
         .val()
         .trim()
     };
 
     // Send the POST request.
-    $.ajax("/burgers", {
+    $.ajax("/api/burgers", {
       type: "POST",
       data: newBurger
     }).then(function() {
       console.log("added new burger");
-      // Reload the page to get the updated list
+
       location.reload();
     });
   });
