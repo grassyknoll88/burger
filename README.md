@@ -2,7 +2,7 @@
 
 ## Overview
 
-Created during KU Coding Bootcamp. The goal was to create a Burger App using Node Express Handlebars and our own ORM. It uses the MVC design pattern, Node and MySQL to query and route data to the app and Handlebars to generate the HTML.
+KU Coding Bootcamp homework centered around Node, MySQL, & Handlebars. The goal was to create a Burger App using Node Express Handlebars and our own ORM. It uses the MVC design pattern, Node and MySQL to query and route data to the app and Handlebars to generate the HTML.
 
 ### Getting Started
 https://guarded-gorge-59976.herokuapp.com/
