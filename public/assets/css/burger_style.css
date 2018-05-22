@@ -15,7 +15,8 @@ textarea {
   margin: 0 auto;
 }
 
-.devburger {
+.devburger,
+.btn {
   background-color: red;
   color: white;
 }
