@@ -3,7 +3,6 @@ body {
   text-align: center;
   background: url(images/burgerbg.jpg);
   background-size: cover;
-  font-family: "Varela Round", sans-serif;
 }
 
 .eaten {
@@ -13,19 +12,23 @@ body {
 textarea {
   width: 250px;
   margin: 0 auto;
+  font-family: "Varela Round", sans-serif;
 }
 
 .devburger,
 .btn {
   background-color: red;
   color: white;
+  font-family: "Varela Round", sans-serif;
 }
 
 ul {
   list-style-type: none;
   color: white;
+  font-family: "Varela Round", sans-serif;
 }
 
 h1 {
   color: white;
+  font-family: "Varela Round", sans-serif;
 }
