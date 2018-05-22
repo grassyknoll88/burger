@@ -1,7 +1,7 @@
 body {
   min-height: 100%;
   text-align: center;
-  background: url(images/burgerbg.jpg);
+  background: url("./images/burgerbg.jpg");
   background-size: cover;
 }
 
@@ -19,6 +19,12 @@ textarea {
 .btn {
   background-color: red;
   color: white;
+  font-family: "Varela Round", sans-serif;
+}
+
+.devburger:hover,
+.btn:hover {
+  background-color: grey;
   font-family: "Varela Round", sans-serif;
 }
 
