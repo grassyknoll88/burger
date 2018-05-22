@@ -1,5 +1,5 @@
 body {
-  background-color: orangered;
+  background: url("../public/assets/images/burgerbg.jpg");
 }
 
 .eaten {
