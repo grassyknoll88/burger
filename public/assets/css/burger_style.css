@@ -1,14 +1,13 @@
 body {
-  background: url("../public/assets/images/burgerbg.jpg");
+  min-height: 100%;
+  text-align: center;
+  background: url(images/burgerbg.jpg);
+  background-size: cover;
   font-family: "Varela Round", sans-serif;
 }
 
 .eaten {
   float: right;
-}
-
-.burgerImg {
-  width: 250px;
 }
 
 textarea {
