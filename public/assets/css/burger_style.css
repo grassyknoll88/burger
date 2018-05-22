@@ -1,5 +1,6 @@
 body {
   background: url("../public/assets/images/burgerbg.jpg");
+  font-family: "Varela Round", sans-serif;
 }
 
 .eaten {
@@ -16,7 +17,7 @@ textarea {
 }
 
 .devburger {
-  background-color: #3e6eff;
+  background-color: red;
   color: white;
 }
 
