@@ -1,7 +1,7 @@
 body {
   min-height: 100%;
   text-align: center;
-  background: url("../images/burgerbg.jpg");
+  background: url("../img/burgerbg.jpg");
   background-size: cover;
 }
 
@@ -22,6 +22,7 @@ textarea {
   color: white;
   font-family: "Varela Round", sans-serif;
   border: none;
+  margin-bottom: 25px;
 }
 
 .devburger:hover,
@@ -39,5 +40,6 @@ ul {
 
 h1 {
   color: white;
+  font-size: 85px;
   font-family: "Varela Round", sans-serif;
 }
